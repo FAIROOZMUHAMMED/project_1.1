@@ -1,0 +1,52 @@
+<section  class="">
+    <div class=" position-relative">
+        <div class="addItem">
+            <div class="col-lg-6 form1">
+                <div class="card-header">
+                    <h3>Update Password</h3>
+                  </div>
+                  
+                  <div class="card-body">
+                    <form class="form " #usersignup="ngForm" (ngSubmit)=" editEmployer()" >
+                        
+                        
+                   
+                        <div class="form-group">
+                            <label >Old Password</label>
+                            <input type="text"  (keyup)="validatepassword();" #oldpassword="ngModel" [(ngModel)]="Employer.confirmpass" class="form-control" name="oldpassword"  id="oldpassword"   
+                                      [class.is-invalid]="oldpassword.invalid && oldpassword.untouched" title="Must contain at least one number and one uppercase and lowercase letter and special chara and atleast 8 character">
+                          
+                            
+                          </div>
+                      <div class="form-group">
+                        <label >New Password</label>
+                        <input type="text"  (keyup)="validatepassword();" #password="ngModel" [(ngModel)]="Employer.newpwd" class="form-control" name="password"  id="password"   
+                                  [class.is-invalid]="password.invalid && password.untouched" title="Must contain at least one number and one uppercase and lowercase letter and special chara and atleast 8 character">
+                        <div class="{{txtcolr}}">{{pwdSt}}</div>
+                        <small  class="form-text text-info" id="passerror" *ngIf="password.pristine " > 
+                            (Must contain at least one number one uppercase , lowercase and special chara and atleast 8 or more character) </small>
+                      </div>
+                      <div class="form-group">
+                        <label >Confirm Password</label>
+                        <input type="text"  class="form-control" name="againpwd"  id="confirmPassword" 
+                         #confirmpass="ngModel" [(ngModel)]="Employer.againpwd" required  [class.is-invalid]="confirmpass.invalid && confirmpass.touched">
+
+                        </div>
+                      <br>
+                      <div class="d-flex justify-content-center ">
+                        <button class="btn btn-primary w-100 " [disabled]="usersignup.form.invalid" >Submit</button>
+                      </div>                    
+                    </form>
+                  </div>
+                
+                
+            </div>
+            
+        </div>
+
+   
+
+    </div>
+  </section><!-- End Hero -->
+<br><br>
+<br>

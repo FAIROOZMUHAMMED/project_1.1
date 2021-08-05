@@ -1,0 +1,23 @@
+
+
+.img{
+    text-align: center;
+}
+
+.txt1 {
+    margin-top: 55px;
+  }
+  
+  #txt h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: rgb(8, 5, 5);
+  }
+  
+  #txt h2 {
+    color: rgb(7, 6, 6);
+    margin: 15px 0 0 0;
+    font-size: 18px;
+  }

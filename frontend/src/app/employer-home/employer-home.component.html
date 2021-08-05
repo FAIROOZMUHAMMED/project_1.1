@@ -1,0 +1,67 @@
+<section id="hero" class="">
+    <div class=" position-relative">
+        <div class="addItem" >
+          <div  id="hrr" class="">
+
+            <div class="col-md-12 conts"> 
+              <div class="panel">
+                <div class="panel-body">          
+                  <!--/stories-->
+                  <div class="detail ">    
+                    
+                    <!-- <div class="col-md-2  ">
+                    </div> -->
+                    
+                    <div class="col-md-10 ">
+                      <br>
+                      <img alt="please ensure internet" src="/assets/user-profile.png" style="width:100px;height:100px;" class="img-circle">
+                      <h3><strong>{{Employer.firstname}} {{Employer.lastname}} </strong></h3> 
+                      <div class="row">
+                        <div class="col-xs-9">
+                          <h4><span class="label label-default"></span></h4><h4>
+                          <small style="font-family:courier,'new courier';" >{{Employer.email}} </small>
+                          </h4></div>
+                          
+                        <div class="col-xs-3"></div>
+                      </div>
+                      <p>{{Employer.company}}</p>
+                      <br><br>
+                    </div>
+                  </div>
+            
+                  <!--/stories-->
+                  
+                  
+                  
+                
+                  
+                </div>
+              </div>
+                                                                                               
+                                                            
+                                                              
+               </div><!--/col-12-->
+
+            
+          </div>
+          <div class="left" >
+            <br>
+              <a class="btn btn-info" style="cursor:pointer"   (click)="editEmployer(employerr.subject)" style="margin-left: 20px; margin-bottom: 5px;"> Edit Profile</a>
+            <br><br>
+            <a class="btn btn-info" style="cursor:pointer"  (click)="editEmployerpwd(employerr.subject)" style="margin-left: 20px; margin-bottom: 5px;"> Update Password</a>
+            <!-- (click)="editEmployer(employerdata)" -->
+              <!-- routerLink="employer/edit" -->
+        </div>
+        
+        <div class="right">
+            <router-outlet></router-outlet>
+        </div>
+
+        </div>
+
+   
+
+    </div>
+  </section><!-- End Hero -->
+<br><br>
+<br>

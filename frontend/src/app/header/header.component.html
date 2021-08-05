@@ -1,0 +1,35 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a routerLink=""><img src="assets/ictak_img.webp" alt=""></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " *ngIf="!_auth.loggedIn()" routerLink="">Home</a></li>
+          <li><a class="nav-link scrollto" routerLink="#about">About</a></li>
+          <li><a class="nav-link scrollto" *ngIf="!_auth.loggedIn()" routerLink="">Faculty</a></li>
+         
+          <!-- <li><a class="nav-link scrollto" routerLink="#team">Team</a></li>
+          <li><a class="nav-link scrollto" routerLink="#pricing">Pricing</a></li> -->
+          <li class="dropdown"><a *ngIf="!_auth.loggedIn()" routerLink="home"><span>Employer</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="employerlogin">Login</a></li>
+              <li><a routerLink="employer/signup">Signup</a></li>
+              <li><a routerLink="jobposting">Job Posting</a></li>
+              
+            </ul>
+          </li>
+          <li>
+            <a class="nav-link scrollto" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <router-outlet></router-outlet>
